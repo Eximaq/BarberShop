@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barber Prime Studio | Barbearia Premium</title>
+    <meta
+      name="description"
+      content="Landing page premium da Barber Prime Studio com agendamento online, planos mensais e área completa do cliente."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="site-header">
+        <div class="logo">
+          <span class="logo-icon">BPS</span>
+          <div>
+            <div>Barber Prime</div>
+            <small style="letter-spacing: 0.3em; font-size: 0.7rem; color: var(--color-text-muted);">Studio</small>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="#inicio">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#planos">Planos</a>
+          <a href="#agendamento">Agendamento</a>
+          <a href="#cliente">Área do Cliente</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <div style="display: flex; gap: 0.75rem; align-items: center;">
+          <button class="btn btn-gold" data-scroll="#agendamento">Agendar Agora</button>
+          <button class="menu-toggle" aria-label="Abrir menu mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section
+          class="hero reveal visible"
+          id="inicio"
+          data-images='[
+            "https://images.unsplash.com/photo-1500856056008-859079534e9e?auto=format&fit=crop&w=1600&q=80",
+            "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80",
+            "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1600&q=80"
+          ]'
+        >
+          <div class="hero-content">
+            <p class="hero-badge">Barber Prime Studio</p>
+            <h1>Estilo, confiança e precisão em cada corte.</h1>
+            <p>
+              Experiência premium, ambiente reservado e barbeiros mestres que entendem o ritual de autocuidado masculino. Viva o próximo nível de sofisticação.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-gold" data-open-modal="#booking-modal">Agendar Corte</button>
+              <button class="btn btn-ghost" data-scroll="#planos">Ver Planos Mensais</button>
+            </div>
+            <div class="hero-info-card">
+              <strong>Próximo horário VIP disponível</strong>
+              <p style="margin: 0.4rem 0 0.8rem;">Hoje, 19h com o Master Barber Lucas.</p>
+              <ul>
+                <li>Atendimento por agendamento</li>
+                <li>Barba, cabelo e grooming completos</li>
+                <li>Espaço com lounge &amp; whiskey bar</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="sobre" class="section reveal">
+          <div class="section-header">
+            <p class="eyebrow">Sobre nós</p>
+            <h2 class="section-title">Mais que uma barbearia, um clube de estilo.</h2>
+            <p>
+              A Barber Prime Studio nasceu para oferecer um ritual completo de cuidado masculino com produtos premium, equipe premiada e um ambiente que combina sofisticação e conforto.
+            </p>
+          </div>
+          <div class="about-grid">
+            <article>
+              <p>
+                Cada atendimento é personalizado: analisamos o formato do rosto, rotina e estilo pessoal para entregar cortes e barbas que elevam a sua presença. Nosso estúdio possui cabine acústica, iluminação de estúdio e amenities exclusivos para uma experiência impecável.
+              </p>
+              <p>
+                Além dos serviços avulsos, oferecemos planos mensais para manter o visual sempre alinhado com previsibilidade e prioridade máxima no agendamento.
+              </p>
+            </article>
+            <ul class="about-highlights">
+              <li>
+                <span class="about-icon">⚡</span>
+                <div>
+                  <strong>Profissionais experientes</strong>
+                  <p style="margin: 0; color: var(--color-text-muted);">Master barbers certificados e em constante atualização.</p>
+                </div>
+              </li>
+              <li>
+                <span class="about-icon">🏛</span>
+                <div>
+                  <strong>Ambiente premium</strong>
+                  <p style="margin: 0; color: var(--color-text-muted);">Lounge privativo, bebidas selecionadas e climatização personalizada.</p>
+                </div>
+              </li>
+              <li>
+                <span class="about-icon">🤝</span>
+                <div>
+                  <strong>Atendimento sob medida</strong>
+                  <p style="margin: 0; color: var(--color-text-muted);">Consultoria de imagem e follow-up pós-serviço via concierge.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="servicos" class="section reveal">
+          <div class="section-header">
+            <p class="eyebrow">Serviços</p>
+            <h2 class="section-title">Precisão em cada detalhe.</h2>
+            <p>Escolha entre nossos serviços signature ou personalize seu combo com tratamentos de couro cabeludo e grooming completo.</p>
+          </div>
+          <div class="cards-grid">
+            <article class="service-card">
+              <h3>Corte Masculino Signature</h3>
+              <p>Consultoria completa + acabamento com tesoura e navalha quente.</p>
+              <p class="service-price">R$ 95</p>
+            </article>
+            <article class="service-card">
+              <h3>Barba Tradicional</h3>
+              <p>Toalha quente, óleo essencial selecionado e finalização com balm.</p>
+              <p class="service-price">R$ 65</p>
+            </article>
+            <article class="service-card">
+              <h3>Corte + Barba Premium</h3>
+              <p>Combo completo com esfoliação facial e hidratação profunda.</p>
+              <p class="service-price">R$ 150</p>
+            </article>
+            <article class="service-card">
+              <h3>Design de Sobrancelhas</h3>
+              <p>Refino com linha e pinça, respeitando o desenho natural.</p>
+              <p class="service-price">R$ 45</p>
+            </article>
+            <article class="service-card">
+              <h3>Pigmentação e Camuflagem</h3>
+              <p>Correção de falhas com pigmentos importados e acabamento matte.</p>
+              <p class="service-price">R$ 210</p>
+            </article>
+            <article class="service-card">
+              <h3>Tratamento Capilar Detox</h3>
+              <p>Protocolos antiqueda e fortalecimento com LED terapêutico.</p>
+              <p class="service-price">R$ 130</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="planos" class="section reveal">
+          <div class="section-header">
+            <p class="eyebrow">Planos mensais</p>
+            <h2 class="section-title">Assinaturas com prioridade máxima.</h2>
+            <p>Escolha o plano ideal para manter o visual sempre impecável, com benefícios exclusivos e acesso antecipado à agenda.</p>
+          </div>
+          <div class="cards-grid">
+            <article class="plan-card">
+              <p class="eyebrow">Plano Bronze</p>
+              <h3>Cortes essenciais</h3>
+              <p class="plan-price">R$ 149/mês</p>
+              <ul class="plan-perks">
+                <li>1 corte + 1 barba por mês</li>
+                <li>Produtos travel-size de cortesia</li>
+                <li>Agendamentos em até 7 dias</li>
+              </ul>
+              <button class="btn btn-outline" type="button" data-plan="Plano Bronze">Assinar Agora</button>
+            </article>
+            <article class="plan-card featured">
+              <p class="eyebrow">Plano Prata</p>
+              <h3>Presença sempre alinhada</h3>
+              <p class="plan-price">R$ 249/mês</p>
+              <ul class="plan-perks">
+                <li>2 cortes + 2 barbas por mês</li>
+                <li>Prioridade no agendamento</li>
+                <li>Convites para eventos exclusivos</li>
+              </ul>
+              <button class="btn btn-gold" type="button" data-plan="Plano Prata">Assinar Agora</button>
+            </article>
+            <article class="plan-card">
+              <p class="eyebrow">Plano Ouro</p>
+              <h3>Liberdade ilimitada</h3>
+              <p class="plan-price">R$ 389/mês</p>
+              <ul class="plan-perks">
+                <li>Cortes e barbas ilimitados</li>
+                <li>Concierge e prioridade absoluta</li>
+                <li>Espaço reservado nas sextas &amp; sábados</li>
+              </ul>
+              <button class="btn btn-outline" type="button" data-plan="Plano Ouro">Assinar Agora</button>
+            </article>
+          </div>
+        </section>
+
+        <section id="barbeiros" class="section reveal">
+          <div class="section-header">
+            <p class="eyebrow">Equipe</p>
+            <h2 class="section-title">Barbeiros especialistas em sua imagem.</h2>
+          </div>
+          <div class="barbers-grid">
+            <article class="barber-card">
+              <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80" alt="Barbeiro Lucas" />
+              <h3>Lucas Andrade</h3>
+              <p class="barber-meta">Master Barber | Cortes clássicos e razor fade</p>
+            </article>
+            <article class="barber-card">
+              <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Barbeiro Rafael" />
+              <h3>Rafael Costa</h3>
+              <p class="barber-meta">Especialista em barba italiana e pigmentação</p>
+            </article>
+            <article class="barber-card">
+              <img src="https://images.unsplash.com/photo-1504598294664-5c8e3d178eea?auto=format&fit=crop&w=800&q=80" alt="Barbeira Marina" />
+              <h3>Marina Pires</h3>
+              <p class="barber-meta">Tratamentos capilares e design de sobrancelhas</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="depoimentos" class="section reveal">
+          <div class="section-header">
+            <p class="eyebrow">Depoimentos</p>
+            <h2 class="section-title">Clientes que vivem a experiência Barber Prime.</h2>
+          </div>
+          <div class="testimonials-grid">
+            <article class="testimonial-card">
+              <p>
+                “Melhor corte da minha vida. A consultoria de imagem fez toda diferença para deixar o visual alinhado com meu cargo.”
+              </p>
+              <div class="testimonial-meta">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80" alt="Cliente Thiago" />
+                <div>
+                  <strong>Thiago Medeiros</strong>
+                  <div class="stars" aria-label="Nota 5 de 5">★★★★★</div>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <p>
+                “Faço parte do plano Prata e nunca mais me preocupei com agenda. Atendimento impecável e lounge incrível.”
+              </p>
+              <div class="testimonial-meta">
+                <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=80" alt="Cliente Rodrigo" />
+                <div>
+                  <strong>Rodrigo Nunes</strong>
+                  <div class="stars" aria-label="Nota 5 de 5">★★★★★</div>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <p>
+                “O dashboard é prático para reagendar viagens de última hora. Equipe sempre flexível e cordial.”
+              </p>
+              <div class="testimonial-meta">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=200&q=80" alt="Cliente Bruno" />
+                <div>
+                  <strong>Bruno Cavalcanti</strong>
+                  <div class="stars" aria-label="Nota 4.5 de 5">★★★★☆</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="agendamento" class="section reveal">
+          <div class="section-header">
+            <p class="eyebrow">Agendamento online</p>
+            <h2 class="section-title">Escolha serviço, profissional, data e confirme.</h2>
+            <p>Confirme seu ritual em segundos com confirmação automática e notificações por e-mail.</p>
+          </div>
+          <div class="booking-grid">
+            <article class="contact-card">
+              <h3>Agende como membro VIP</h3>
+              <p>Clientes logados visualizam disponibilidade em tempo real e podem reagendar com apenas um toque.</p>
+              <button class="btn btn-gold" data-open-modal="#booking-modal">Agendar Online</button>
+              <ul style="margin-top: 1.5rem; padding-left: 1.3rem; color: var(--color-text-muted);">
+                <li>Selecione o serviço desejado</li>
+                <li>Escolha o barbeiro preferido</li>
+                <li>Defina data e horário ideais</li>
+                <li>Login ou cadastro direto no modal</li>
+              </ul>
+            </article>
+            <form id="quick-booking-form" data-booking-form data-mode="quick">
+              <label for="quick-service">Serviço</label>
+              <select id="quick-service" name="service" required>
+                <option value="">Selecione</option>
+                <option value="Corte Masculino Signature">Corte Masculino Signature</option>
+                <option value="Barba Tradicional">Barba Tradicional</option>
+                <option value="Corte + Barba Premium">Corte + Barba Premium</option>
+                <option value="Design de Sobrancelhas">Design de Sobrancelhas</option>
+                <option value="Tratamento Capilar Detox">Tratamento Capilar Detox</option>
+              </select>
+
+              <label for="quick-professional">Profissional</label>
+              <select id="quick-professional" name="professional" required>
+                <option value="">Selecione</option>
+                <option value="Lucas Andrade">Lucas Andrade</option>
+                <option value="Rafael Costa">Rafael Costa</option>
+                <option value="Marina Pires">Marina Pires</option>
+              </select>
+
+              <label for="quick-date">Data</label>
+              <input type="date" id="quick-date" name="date" required />
+
+              <label for="quick-time">Horário</label>
+              <input type="time" id="quick-time" name="time" required />
+
+              <label for="quick-notes">Observações</label>
+              <textarea id="quick-notes" name="notes" placeholder="Deseja algo específico?"></textarea>
+
+              <button class="btn btn-outline" type="submit">Confirmar</button>
+            </form>
+          </div>
+        </section>
+
+        <section id="cliente" class="section reveal">
+          <div class="section-header">
+            <p class="eyebrow">Área do cliente</p>
+            <h2 class="section-title">Dashboard exclusivo para membros.</h2>
+            <p>Crie sua conta, acompanhe histórico, reagende, assine planos e acompanhe status em um único lugar.</p>
+          </div>
+          <div class="dashboard-grid">
+            <article class="dashboard-card">
+              <h3 id="dashboard-welcome">Bem-vindo à Barber Prime Studio</h3>
+              <form id="auth-form" novalidate>
+                <label for="auth-action">Acesso</label>
+                <select id="auth-action" name="authAction" required>
+                  <option value="login">Já tenho conta</option>
+                  <option value="register">Criar nova conta</option>
+                </select>
+
+                <label for="auth-name">Nome completo</label>
+                <input id="auth-name" name="name" type="text" placeholder="Seu nome" />
+
+                <label for="auth-email">E-mail</label>
+                <input id="auth-email" name="email" type="email" required placeholder="voce@email.com" />
+
+                <label for="auth-password">Senha</label>
+                <input id="auth-password" name="password" type="password" required placeholder="••••••" />
+
+                <label for="plan-choice">Interesse em plano</label>
+                <select id="plan-choice" name="planInterest">
+                  <option value="">Escolher depois</option>
+                  <option value="Plano Bronze">Plano Bronze</option>
+                  <option value="Plano Prata">Plano Prata</option>
+                  <option value="Plano Ouro">Plano Ouro</option>
+                </select>
+
+                <button class="btn btn-gold" type="submit">Entrar na área do cliente</button>
+              </form>
+            </article>
+            <article class="dashboard-card">
+              <h3>Status da assinatura</h3>
+              <p id="subscription-status">Faça login para visualizar sua assinatura.</p>
+              <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                <button class="btn btn-outline" type="button" data-plan="Plano Bronze">Plano Bronze</button>
+                <button class="btn btn-outline" type="button" data-plan="Plano Prata">Plano Prata</button>
+                <button class="btn btn-outline" type="button" data-plan="Plano Ouro">Plano Ouro</button>
+              </div>
+              <hr style="margin: 2rem 0; border-color: rgba(255, 255, 255, 0.1);" />
+              <h4>Próximo agendamento</h4>
+              <p id="next-appointment">Nenhum agendamento encontrado.</p>
+            </article>
+            <article class="dashboard-card">
+              <h3>Histórico e ações</h3>
+              <ul class="history-list" id="history-list">
+                <li class="history-item">Faça login para visualizar e gerenciar seus agendamentos.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="contato" class="section reveal">
+          <div class="section-header">
+            <p class="eyebrow">Contato</p>
+            <h2 class="section-title">Conecte-se com nosso concierge.</h2>
+            <p>Atendimento personalizado via WhatsApp e presencial no coração da cidade.</p>
+          </div>
+          <div class="contact-grid">
+            <article class="contact-card">
+              <h3>WhatsApp</h3>
+              <p>Converse com nosso concierge e alinhe detalhes do seu atendimento.</p>
+              <a class="btn btn-gold" href="https://wa.me/5511999999999" target="_blank" rel="noreferrer">WhatsApp Direto</a>
+              <p style="margin-top: 1rem; color: var(--color-text-muted);">Resposta em até 5 minutos, de terça a sábado.</p>
+            </article>
+            <article class="contact-card">
+              <h3>Endereço &amp; horários</h3>
+              <p>Rua do Estilo, 450 - Centro, São Paulo</p>
+              <p>Terça a sábado: 9h às 22h | Domingo: 10h às 18h</p>
+              <p>Estacionamento com manobrista e valet digital.</p>
+            </article>
+            <article class="contact-card">
+              <h3>Mapa</h3>
+              <iframe
+                title="Mapa Barber Prime Studio"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.555565866502!2d-46.65598132543705!3d-23.58492747877896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57648ab0dfff%3A0xfadc0d06979cd4e7!2sAv.%20Paulista%2C%201000!5e0!3m2!1spt-BR!2sbr!4v1689697491000!5m2!1spt-BR!2sbr"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div>
+          <strong>Barber Prime Studio</strong>
+          <p style="color: var(--color-text-muted);">© 2025 Barber Prime Studio. Todos os direitos reservados.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#inicio">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#planos">Planos</a>
+          <a href="#agendamento">Agendamento</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+          <a href="https://tiktok.com" target="_blank" rel="noreferrer">TikTok</a>
+        </div>
+      </footer>
+    </div>
+
+    <div class="modal" id="booking-modal" aria-hidden="true" role="dialog">
+      <div class="modal-content">
+        <button class="modal-close" type="button" aria-label="Fechar" data-close-modal>&times;</button>
+        <p class="eyebrow">Agendamento VIP</p>
+        <h3 style="margin-top: 0;">Confirme seu ritual exclusivo</h3>
+        <form id="booking-modal-form" data-booking-form data-mode="modal">
+          <label for="modal-service">Serviço</label>
+          <select id="modal-service" name="service" required>
+            <option value="">Selecione</option>
+            <option value="Corte Masculino Signature">Corte Masculino Signature</option>
+            <option value="Barba Tradicional">Barba Tradicional</option>
+            <option value="Corte + Barba Premium">Corte + Barba Premium</option>
+            <option value="Design de Sobrancelhas">Design de Sobrancelhas</option>
+            <option value="Tratamento Capilar Detox">Tratamento Capilar Detox</option>
+            <option value="Pigmentação e Camuflagem">Pigmentação e Camuflagem</option>
+          </select>
+
+          <label for="modal-professional">Profissional</label>
+          <select id="modal-professional" name="professional" required>
+            <option value="">Selecione</option>
+            <option value="Lucas Andrade">Lucas Andrade</option>
+            <option value="Rafael Costa">Rafael Costa</option>
+            <option value="Marina Pires">Marina Pires</option>
+          </select>
+
+          <label for="modal-date">Data</label>
+          <input type="date" id="modal-date" name="date" required />
+
+          <label for="modal-time">Horário</label>
+          <input type="time" id="modal-time" name="time" required />
+
+          <label for="modal-notes">Observações</label>
+          <textarea id="modal-notes" name="notes" placeholder="Preferências, referências ou alergias"></textarea>
+
+          <fieldset style="border: 1px solid rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 14px;">
+            <legend style="padding: 0 0.5rem; color: var(--color-text-muted);">Login / Cadastro do cliente</legend>
+            <label for="modal-action">Acesso</label>
+            <select id="modal-action" name="clientAction">
+              <option value="login">Tenho conta</option>
+              <option value="register">Criar conta agora</option>
+            </select>
+
+            <label for="modal-name">Nome completo</label>
+            <input id="modal-name" name="clientName" type="text" placeholder="Seu nome" />
+
+            <label for="modal-email">E-mail</label>
+            <input id="modal-email" name="clientEmail" type="email" placeholder="voce@email.com" />
+
+            <label for="modal-password">Senha</label>
+            <input id="modal-password" name="clientPassword" type="password" placeholder="••••••" />
+          </fieldset>
+
+          <button class="btn btn-gold" type="submit">Confirmar agendamento</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="toast" id="feedback-toast" role="status" aria-live="polite"></div>
+
+    <script src="script/script.js" defer></script>
+  </body>
+</html>
