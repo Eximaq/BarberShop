@@ -3,9 +3,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".site-header");
   const navLinks = document.querySelector(".nav-links");
   const menuToggle = document.querySelector(".menu-toggle");
+  const navCloseButtons = document.querySelectorAll(".nav-close");
   const toast = document.getElementById("feedback-toast");
   const hero = document.querySelector(".hero");
   const heroImages = hero?.dataset.images ? JSON.parse(hero.dataset.images) : [];
+
+  const setNavState = (isOpen) => {
+    if (isOpen) {
+      body.classList.add("nav-open");
+    } else {
+      body.classList.remove("nav-open");
+    }
+    if (menuToggle) {
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.classList.toggle("active", isOpen);
+    }
+  };
+  setNavState(false);
 
   const showToast = (message, type = "success") => {
     if (!toast) return;
@@ -42,16 +56,29 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!href || !href.startsWith("#")) return;
       event.preventDefault();
       scrollToSection(href);
-      body.classList.remove("nav-open");
+      setNavState(false);
     });
   });
 
   menuToggle?.addEventListener("click", () => {
-    body.classList.toggle("nav-open");
+    const willOpen = !body.classList.contains("nav-open");
+    setNavState(willOpen);
   });
 
   navLinks?.addEventListener("click", (event) => {
-    if (event.target.matches("a")) body.classList.remove("nav-open");
+    if (event.target.matches("a")) setNavState(false);
+  });
+
+  navCloseButtons.forEach((button) => {
+    button.addEventListener("click", () => setNavState(false));
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 980) setNavState(false);
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setNavState(false);
   });
 
   const reveals = document.querySelectorAll(".reveal");
@@ -165,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
       dashboardWelcome.textContent = `Olá, ${name || "membro"}`;
       subscriptionStatus.textContent = plan ? `Plano ativo: ${plan}` : "Você ainda não ativou um plano. Escolha um para desbloquear vantagens.";
     } else {
-      dashboardWelcome.textContent = "Bem-vindo à Barber Prime Studio";
+      dashboardWelcome.textContent = "Bem-vindo à Barbearia Dom Miguel";
       subscriptionStatus.textContent = "Crie sua conta para visualizar planos e histórico.";
     }
     renderHistory();
@@ -178,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const action = formData.get("clientAction") || "login";
     const email = formData.get("clientEmail");
        const password = formData.get("clientPassword");
-    const name = formData.get("clientName") || "Cliente Barber Prime";
+    const name = formData.get("clientName") || "Cliente Dom Miguel";
     if (!email || !password) {
       showToast("Informe e-mail e senha para continuar.", "error");
       return false;
@@ -318,7 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const action = formData.get("authAction");
     const email = formData.get("email");
     const password = formData.get("password");
-    const name = formData.get("name") || "Cliente Barber Prime";
+    const name = formData.get("name") || "Cliente Dom Miguel";
     const planInterest = formData.get("planInterest");
     if (!email || !password) {
       showToast("Preencha e-mail e senha.", "error");

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barber Prime Studio | Barbearia Premium</title>
+    <title>Barbearia Dom Miguel | Barbearia Premium</title>
     <meta
       name="description"
-      content="Landing page premium da Barber Prime Studio com agendamento online, planos mensais e área completa do cliente."
+      content="Landing page premium da Barbearia Dom Miguel com agendamento online, planos mensais e área completa do cliente."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,28 +19,34 @@
   <body>
     <div class="page-wrapper">
       <header class="site-header">
-        <div class="logo">
-          <span class="logo-icon">BPS</span>
-          <div>
-            <div>Barber Prime</div>
-            <small style="letter-spacing: 0.3em; font-size: 0.7rem; color: var(--color-text-muted);">Studio</small>
+        <div class="header-inner">
+          <div class="logo">
+            <span class="logo-icon">BDM</span>
+            <div>
+              <div>Barbearia Dom</div>
+              <small style="letter-spacing: 0.3em; font-size: 0.7rem; color: var(--color-text-muted);">Miguel</small>
+            </div>
           </div>
-        </div>
-        <nav class="nav-links">
-          <a href="#inicio">Início</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#planos">Planos</a>
-          <a href="#agendamento">Agendamento</a>
-          <a href="#cliente">Área do Cliente</a>
-          <a href="#contato">Contato</a>
-        </nav>
-        <div style="display: flex; gap: 0.75rem; align-items: center;">
-          <button class="btn btn-gold" data-scroll="#agendamento">Agendar Agora</button>
-          <button class="menu-toggle" aria-label="Abrir menu mobile">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          <nav class="nav-links" id="primary-navigation" aria-label="Menu principal">
+            <button class="nav-close" type="button" aria-label="Fechar menu">
+              <span>Fechar</span>
+              <span aria-hidden="true">×</span>
+            </button>
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#planos">Planos</a>
+            <a href="#agendamento">Agendamento</a>
+            <a href="#cliente">Área do Cliente</a>
+            <a href="#contato">Contato</a>
+          </nav>
+          <div class="header-cta">
+            <button class="btn btn-gold" data-scroll="#agendamento">Agendar Agora</button>
+            <button class="menu-toggle" aria-label="Abrir menu mobile" aria-controls="primary-navigation" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -55,7 +61,7 @@
           ]'
         >
           <div class="hero-content">
-            <p class="hero-badge">Barber Prime Studio</p>
+            <p class="hero-badge">Barbearia Dom Miguel</p>
             <h1>Estilo, confiança e precisão em cada corte.</h1>
             <p>
               Experiência premium, ambiente reservado e barbeiros mestres que entendem o ritual de autocuidado masculino. Viva o próximo nível de sofisticação.
@@ -81,7 +87,7 @@
             <p class="eyebrow">Sobre nós</p>
             <h2 class="section-title">Mais que uma barbearia, um clube de estilo.</h2>
             <p>
-              A Barber Prime Studio nasceu para oferecer um ritual completo de cuidado masculino com produtos premium, equipe premiada e um ambiente que combina sofisticação e conforto.
+              A Barbearia Dom Miguel nasceu para oferecer um ritual completo de cuidado masculino com produtos premium, equipe premiada e um ambiente que combina sofisticação e conforto.
             </p>
           </div>
           <div class="about-grid">
@@ -229,7 +235,7 @@
         <section id="depoimentos" class="section reveal">
           <div class="section-header">
             <p class="eyebrow">Depoimentos</p>
-            <h2 class="section-title">Clientes que vivem a experiência Barber Prime.</h2>
+            <h2 class="section-title">Clientes que vivem a experiência Dom Miguel.</h2>
           </div>
           <div class="testimonials-grid">
             <article class="testimonial-card">
@@ -330,7 +336,7 @@
           </div>
           <div class="dashboard-grid">
             <article class="dashboard-card">
-              <h3 id="dashboard-welcome">Bem-vindo à Barber Prime Studio</h3>
+              <h3 id="dashboard-welcome">Bem-vindo à Barbearia Dom Miguel</h3>
               <form id="auth-form" novalidate>
                 <label for="auth-action">Acesso</label>
                 <select id="auth-action" name="authAction" required>
@@ -401,7 +407,7 @@
             <article class="contact-card">
               <h3>Mapa</h3>
               <iframe
-                title="Mapa Barber Prime Studio"
+                title="Mapa Barbearia Dom Miguel"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.555565866502!2d-46.65598132543705!3d-23.58492747877896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57648ab0dfff%3A0xfadc0d06979cd4e7!2sAv.%20Paulista%2C%201000!5e0!3m2!1spt-BR!2sbr!4v1689697491000!5m2!1spt-BR!2sbr"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -413,8 +419,8 @@
 
       <footer>
         <div>
-          <strong>Barber Prime Studio</strong>
-          <p style="color: var(--color-text-muted);">© 2025 Barber Prime Studio. Todos os direitos reservados.</p>
+          <strong>Barbearia Dom Miguel</strong>
+          <p style="color: var(--color-text-muted);">© 2025 Barbearia Dom Miguel. Todos os direitos reservados.</p>
         </div>
         <div class="footer-links">
           <a href="#inicio">Início</a>
